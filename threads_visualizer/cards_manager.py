@@ -4,6 +4,7 @@ from h2o_wave import site
 class CardsManager:
     def __init__(self, route: str):
         self.page = site[route]
+        self.page.drop()
         self.rows_of_type = {}
 
     def get_free_row(self):
